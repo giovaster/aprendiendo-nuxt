@@ -1,0 +1,14 @@
+{
+  "name": "nuxt-web",
+  "version": "1.0.0",
+  "description": "pagina web con nuxt",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nuxt"
+  },
+  "author": "giovanny sterling",
+  "license": "ISC",
+  "dependencies": {
+    "nuxt": "^2.5.1"
+  }
+}
