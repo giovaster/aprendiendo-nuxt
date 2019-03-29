@@ -9,6 +9,8 @@
   "author": "giovanny sterling",
   "license": "ISC",
   "dependencies": {
+    "bootstrap-vue": "^2.0.0-rc.16",
+    "firebase": "^5.9.2",
     "nuxt": "^2.5.1"
   }
 }
