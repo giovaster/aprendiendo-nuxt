@@ -1,7 +1,5 @@
 export default {
-
-    modules:[
+    modules: [
         'bootstrap-vue/nuxt'
-
     ]
 }

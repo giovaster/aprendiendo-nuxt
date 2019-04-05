@@ -5,6 +5,7 @@ import { interopDefault } from './utils'
 const _70405f3e = () => interopDefault(import('..\\pages\\contacto.vue' /* webpackChunkName: "pages_contacto" */))
 const _6cdd56ce = () => interopDefault(import('..\\pages\\productos\\index.vue' /* webpackChunkName: "pages_productos_index" */))
 const _7ef487fa = () => interopDefault(import('..\\pages\\productos\\crear.vue' /* webpackChunkName: "pages_productos_crear" */))
+const _4d21ab02 = () => interopDefault(import('..\\pages\\productos\\main.js' /* webpackChunkName: "pages_productos_main" */))
 const _09767df3 = () => interopDefault(import('..\\pages\\index.vue' /* webpackChunkName: "pages_index" */))
 
 Vue.use(Router)
@@ -93,6 +94,10 @@ export function createRouter() {
       path: "/productos/crear",
       component: _7ef487fa,
       name: "productos-crear"
+    }, {
+      path: "/productos/main",
+      component: _4d21ab02,
+      name: "productos-main"
     }, {
       path: "/",
       component: _09767df3,

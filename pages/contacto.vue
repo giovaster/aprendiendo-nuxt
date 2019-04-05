@@ -1,11 +1,13 @@
 <template>
-<div>
-    <h1> lista de contactos </h1>
-</div>
+    <div>
+        <h1>Desde el contacto</h1>
+    </div>
 </template>
+
 <script>
 import navbar from '../components/navbar'
 export default {
-    Components: {navbar},
+    components: {navbar}
 }
 </script>
+
