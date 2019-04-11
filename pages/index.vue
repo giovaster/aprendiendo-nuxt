@@ -1,6 +1,6 @@
 <<template>
     <div>
-        <h1>holi {{ msg }}</h1>
+        <h1>pagina {{ msg }}</h1>
         <input type="text" v-model="msg">
         <button @click="guerdar" class="btn btn-primary">Guardar</button>
         <b-button variant="primary">Guardar</b-button>
@@ -24,7 +24,7 @@ export default {
     components: {navbar},
     data(){
         return{
-            msg: "Esteban",
+            msg: "sterling",
             municipios: ['Mocoa', 'Villa', 'Puerto']
         };
     },
