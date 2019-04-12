@@ -6,6 +6,7 @@ const _70405f3e = () => interopDefault(import('..\\pages\\contacto.vue' /* webpa
 const _6cdd56ce = () => interopDefault(import('..\\pages\\productos\\index.vue' /* webpackChunkName: "pages_productos_index" */))
 const _7ef487fa = () => interopDefault(import('..\\pages\\productos\\crear.vue' /* webpackChunkName: "pages_productos_crear" */))
 const _4d21ab02 = () => interopDefault(import('..\\pages\\productos\\main.js' /* webpackChunkName: "pages_productos_main" */))
+const _7ac58633 = () => interopDefault(import('..\\pages\\productos\\nuevo.vue' /* webpackChunkName: "pages_productos_nuevo" */))
 const _09767df3 = () => interopDefault(import('..\\pages\\index.vue' /* webpackChunkName: "pages_index" */))
 
 Vue.use(Router)
@@ -98,6 +99,10 @@ export function createRouter() {
       path: "/productos/main",
       component: _4d21ab02,
       name: "productos-main"
+    }, {
+      path: "/productos/nuevo",
+      component: _7ac58633,
+      name: "productos-nuevo"
     }, {
       path: "/",
       component: _09767df3,

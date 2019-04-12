@@ -5,30 +5,30 @@
                 <h1>Ingreso de Nuevos Productos</h1>
             </div>
         </div>
-        <form name="frmdatos">
+        <form name="frmdatos" @submit.prevent="guerdarProducto">
             <div class="row">
                 <div class="col-sm-12">
                     <div class="form-group">
                         <label for="imagen">IMAGEN</label>
-                        <input type="file" class="form-control" placeholder="Ingresa tu Nombre" name="imagen" id="imagen">
+                        <input type="file" class="form-control"  placeholder="Carga Una Imagen" name="imagen" id="imagen">
                     </div>
                     <div class="form-group">
                         <label for="nombre">Nombre del Producto:</label>
-                        <input type="text" class="form-control" placeholder="Ingresa el nombre del producto" name="nombre" id="nombre">
+                        <input type="text" class="form-control" required v-model="form.nombre" placeholder="Ingresa el nombre del producto" name="nombre" id="nombre">
                     </div>
                     <div class="form-group">
                         <label for="precio">PRECIO:</label>
-                        <input type="text" class="form-control" placeholder="Ingresa Precio" name="precio" id="precio">
+                        <input type="number" class="form-control" required v-model="form.precio" placeholder="Ingresa Precio" name="precio" id="precio">
                     </div>
                     <div class="form-group">
                         <label for="cantidad">CANTIDAD:</label>
-                        <input type="text" class="form-control" placeholder="Ingresa la Cantidad" name="cantidad" id="cantidad">
+                        <input type="number" class="form-control"  required v-model="form.cantidad" placeholder="Ingresa la Cantidad" name="cantidad" id="cantidad">
                     </div>
                 </div>
             </div>
             <div class="row">
                 <div class="col-sm-12">
-                    <button type="button" class="btn btn-primary" onclick="guardar()">Guardar</button>
+                    <button type="submit" class="btn btn-primary">Guardar</button>
                 </div>
             </div>
         </form>        
@@ -36,7 +36,27 @@
 </template>
 
 <script>
-export default {
 
+import {db} from '../../services/firebase'
+
+export default {
+    data(){
+        return{
+            form: {
+                nombre: '',
+                cantidad: '',
+                precio: ''
+            }
+        }
+    },
+    methods: {
+        guerdarProducto(){
+            db.collection("productos").add(this.form).then(res => {
+                this.$router.push({
+                    path: "/producto"
+                })
+            })
+        }
+    }
 }
 </script>
