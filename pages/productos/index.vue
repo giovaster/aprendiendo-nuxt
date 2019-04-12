@@ -10,7 +10,22 @@
 
     <div class="rown mt-2">
       <div class="col-sm-12">
-        <b-table responsive striped hover :fields="fields" :items="productos" id="productos" :current-page="currentPage" :per-page="perPage"/>
+        <b-table responsive striped hover 
+        :fields="fields" 
+        :items="productos" id="productos" 
+        :current-page="currentPage"
+         :per-page="perPage">
+<template slot="acciones">
+<b-button variant="success">
+    Editar
+</b-button>
+<b-button variant="danger">
+    Eliminar
+</b-button>
+
+    aqui van las acciones
+</template>
+    </b-table>
         <b-pagination
           v-model="currentPage"
           :total-rows="rows"
@@ -51,6 +66,12 @@ export default {
     rows() {
       return this.productos.length;
     }
+    
+  },
+  methods:{
+      eliminarProducto(){
+          db.collection('productos').delete(id)
+      }
   }
 };
 </script>
