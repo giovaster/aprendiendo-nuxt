@@ -12,5 +12,8 @@
     "bootstrap-vue": "^2.0.0-rc.16",
     "firebase": "^5.9.4",
     "nuxt": "^2.5.1"
+  },
+  "devDependencies": {
+    "core-js": "^2.6.5"
   }
 }
