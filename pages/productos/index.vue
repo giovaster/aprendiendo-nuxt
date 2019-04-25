@@ -20,7 +20,7 @@
 <b-button variant="success">
     Editar
 </b-button>
-<b-button variant="danger" @click="eliminarProducto(data.item.id,data.index)">
+<b-button variant="danger" @click="eliminarProducto(data.item.id)">
     Eliminar
 </b-button>
 
@@ -75,9 +75,12 @@ export default {
     
   },
   methods:{
-      eliminarProducto(id,index){
+      eliminarProducto(id){
         
          db.collection("productos").doc(id).delete().then(()=>{
+         let index;
+         this.productos.map((value,key)=>{
+           if(value.id == id) index = key })
          this.productos.splice(index,1)
          
         })
