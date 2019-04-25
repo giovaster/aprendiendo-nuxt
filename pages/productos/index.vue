@@ -15,12 +15,12 @@
         :items="productos" id="productos" 
         :current-page="currentPage"
          :per-page="perPage">
-<template slot="acciones" slot-scope="">
+<template slot="acciones" slot-scope="data">
 
 <b-button variant="success">
     Editar
 </b-button>
-<b-button variant="danger">
+<b-button variant="danger" @click="eliminarProducto(data.item.id,data.index)">
     Eliminar
 </b-button>
 
@@ -75,8 +75,12 @@ export default {
     
   },
   methods:{
-      eliminarProducto(){
-          db.collection('productos').delete(id)
+      eliminarProducto(id,index){
+        
+         db.collection("productos").doc(id).delete().then(()=>{
+         this.productos.splice(index,1)
+         
+        })
       }
   }
 };

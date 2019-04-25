@@ -17,11 +17,11 @@
                         <input type="text" class="form-control" required v-model="form.nombre" placeholder="Ingresa el nombre del producto" name="nombre" id="nombre">
                     </div>
                     <div class="form-group">
-                        <label for="precio">PRECIO:</label>
+                        <label for="precio">Precio:</label>
                         <input type="number" class="form-control" required v-model="form.precio" placeholder="Ingresa Precio" name="precio" id="precio">
                     </div>
                     <div class="form-group">
-                        <label for="cantidad">CANTIDAD:</label>
+                        <label for="cantidad">Cantidad:</label>
                         <input type="number" class="form-control"  required v-model="form.cantidad" placeholder="Ingresa la Cantidad" name="cantidad" id="cantidad">
                     </div>
                 </div>
