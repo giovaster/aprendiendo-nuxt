@@ -15,8 +15,8 @@
         :items="productos" id="productos" 
         :current-page="currentPage"
          :per-page="perPage">
-<template slot="acciones" slot-scope="data">
-</template>
+<template slot="acciones" slot-scope="">
+
 <b-button variant="success">
     Editar
 </b-button>
