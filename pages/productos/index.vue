@@ -5,7 +5,7 @@
     </div>
 
     <div class="col-sm-6">
-      <b-button variant="primary" href="/producto/crear">Nuevo</b-button>
+      <b-button class="primary" href="/productos/crear">Nuevo</b-button>
     </div>
 
     <div class="rown mt-2">
@@ -15,7 +15,8 @@
         :items="productos" id="productos" 
         :current-page="currentPage"
          :per-page="perPage">
-<template slot="acciones">
+<template slot="acciones" slot-scope="data">
+</template>
 <b-button variant="success">
     Editar
 </b-button>
@@ -48,8 +49,13 @@ export default {
         let productos = [];
 
         productosSnap.forEach(value => {
-          productos.push(value.data());
+          productos.push({
+            id:value.id,
+            ...value.data()
+          });
         });
+
+        console.log(productos)
         return {
           productos,
           currentPage: 1,

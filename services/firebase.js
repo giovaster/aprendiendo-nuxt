@@ -7,7 +7,7 @@ var config = {
     storageBucket: "nuxtbd.appspot.com",
     messagingSenderId: "964859792751"
   };
-  if(!firebase.apps.lenght){
+  if(!firebase.apps.length){
     firebase.initializeApp(config);
   }
   const db = firebase.firestore()

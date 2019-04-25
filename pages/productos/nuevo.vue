@@ -1,4 +1,4 @@
-<template>
+<!--template>
   <b-form @submit.prevent="guardarProducto">
     <div class="row mt-3">
       <div class="col-xs-6 col-sm-5 col-md-6">
@@ -47,7 +47,7 @@
       <div class="col-xs-12 offset-sm-5">
         <b-button-toolbar>
           <b-button-group right class="mx-2">
-            <b-button href="/productos">Volver</b-button>
+            <b-button href="/productos/crear">Volver</b-button>
             <b-button variant="primary" type="submit">Guardar</b-button>
           </b-button-group>
         </b-button-toolbar>
@@ -77,4 +77,4 @@ export default {
     }
   }
 }
-</script>
+</script--¡>

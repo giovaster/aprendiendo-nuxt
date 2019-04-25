@@ -53,7 +53,7 @@ export default {
         guerdarProducto(){
             db.collection("productos").add(this.form).then(res => {
                 this.$router.push({
-                    path: "/producto"
+                    path: "/productos"
                 })
             })
         }
