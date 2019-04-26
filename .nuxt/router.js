@@ -2,8 +2,10 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import { interopDefault } from './utils'
 
+const _78ec5353 = () => interopDefault(import('..\\pages\\categorias\\index.vue' /* webpackChunkName: "pages_categorias_index" */))
 const _70405f3e = () => interopDefault(import('..\\pages\\contacto.vue' /* webpackChunkName: "pages_contacto" */))
 const _6cdd56ce = () => interopDefault(import('..\\pages\\productos\\index.vue' /* webpackChunkName: "pages_productos_index" */))
+const _66d68ef0 = () => interopDefault(import('..\\pages\\categorias\\crear.vue' /* webpackChunkName: "pages_categorias_crear" */))
 const _7ef487fa = () => interopDefault(import('..\\pages\\productos\\crear.vue' /* webpackChunkName: "pages_productos_crear" */))
 const _4d21ab02 = () => interopDefault(import('..\\pages\\productos\\main.js' /* webpackChunkName: "pages_productos_main" */))
 const _7ac58633 = () => interopDefault(import('..\\pages\\productos\\nuevo.vue' /* webpackChunkName: "pages_productos_nuevo" */))
@@ -84,6 +86,10 @@ export function createRouter() {
     scrollBehavior,
 
     routes: [{
+      path: "/categorias",
+      component: _78ec5353,
+      name: "categorias"
+    }, {
       path: "/contacto",
       component: _70405f3e,
       name: "contacto"
@@ -91,6 +97,10 @@ export function createRouter() {
       path: "/productos",
       component: _6cdd56ce,
       name: "productos"
+    }, {
+      path: "/categorias/crear",
+      component: _66d68ef0,
+      name: "categorias-crear"
     }, {
       path: "/productos/crear",
       component: _7ef487fa,

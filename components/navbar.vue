@@ -5,7 +5,7 @@
     </div-->
     <b-navbar variant="danger" type="dark" toggleable="lg">
         <b-navbar-brand href="/">
-            BootstrapVue
+            inicio
         </b-navbar-brand>
         <b-navbar-toggle target="menu"></b-navbar-toggle>
         <b-collapse is-nav id="menu">
@@ -15,6 +15,9 @@
                 </b-nav-item>
                 <b-nav-item href="/productos">
                     Productos
+                </b-nav-item>
+                <b-nav-item href="/categorias">
+                    categorias
                 </b-nav-item>
             </b-navbar-nav>
         </b-collapse>
