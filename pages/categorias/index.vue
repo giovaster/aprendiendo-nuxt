@@ -23,7 +23,7 @@
 <b-button variant="danger" @click="eliminarCategorias(data.item.id)">
     Eliminar
 </b-button>
-    accion
+    ...
 </template>
     </b-table>
         <b-pagination
