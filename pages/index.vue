@@ -1,5 +1,7 @@
 <<template>
-    <div>
+
+<div>
+  
         <h1>menu {{ msg }}</h1>
         <input type="text" v-model="msg">
         <button @click="guerdar" class="btn btn-primary">Guardar</button>

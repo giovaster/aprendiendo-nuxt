@@ -2,6 +2,7 @@
     <div>
         <navbar/>
         <div class="container-fluid">
+
             <Nuxt />
         </div>
         
