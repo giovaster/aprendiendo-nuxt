@@ -3,12 +3,12 @@ import 'firebase/storage'
 import 'firebase/auth'
 
 var config = {
-    apiKey: "AIzaSyC5rxkzk_eVwI3dQvFaC89hcpVBn4zCEnA",
+    apiKey: "",
     authDomain: "nuxtbd.firebaseapp.com",
     databaseURL: "https://nuxtbd.firebaseio.com",
     projectId: "nuxtbd",
     storageBucket: "nuxtbd.appspot.com",
-    messagingSenderId: "1021053836954"
+    messagingSenderId: ""
   };
 
   if(!firebase.apps.length){
