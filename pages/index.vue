@@ -1,45 +1,38 @@
-<<template>
-
-<div>
-  
-        <h1>menu {{ msg }}</h1>
-        <input type="text" v-model="msg">
-        <button @click="guerdar" class="btn btn-primary">Guardar</button>
-        <b-button variant="primary">Guardar</b-button>
-        <table>
-            <tr>
-                <th>Nombre</th>
-            </tr>
-            <tr v-for="(item, index) in municipios" :key="index">
-                <td>{{item}}</td>
-            </tr>
-        </table>
+<template>
+  <div class="row mt-4">
+    <div class="col-sm-3" v-for="producto in productos" :key="producto.id">
+      <cardProducto :precio="producto.precio" :nombre="producto.nombre" :imagen="producto.imagen" :slug="producto.slug"/>
     </div>
+  </div>
 </template>
 
 <script>
-
-import navbar from '../components/navbar'
-//import contacto from './contacto'
+import { db } from "../services/firebase";
+import cardProducto from '../components/cardProducto';
 
 export default {
-    components: {navbar},
-    data(){
-        return{
-            msg: "inventario",
-            municipios: ['mocoa', 'villagarzon', 'Puerto riko']
+  components: {cardProducto},
+  asyncData() {
+    return db
+      .collection("productos")
+      .get()
+      .then(productosSnap => {
+        let productos = [];
+
+        productosSnap.forEach(value => {
+          productos.push({
+            id: value.id,
+            ...value.data()
+          });
+        });
+        return {
+          productos
         };
-    },
-    methods: {
-        guerdar(){
-            this.municipios.push(this.msg)
-            this.msg = ''
-        }
-    }
-}
+      });
+  },
+  data() {
+    return {};
+  },
+  methods: {}
+};
 </script>
-
-<style>
-    
-</style>
-

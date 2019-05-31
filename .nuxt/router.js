@@ -4,11 +4,12 @@ import { interopDefault } from './utils'
 
 const _78ec5353 = () => interopDefault(import('..\\pages\\categorias\\index.vue' /* webpackChunkName: "pages_categorias_index" */))
 const _70405f3e = () => interopDefault(import('..\\pages\\contacto.vue' /* webpackChunkName: "pages_contacto" */))
+const _59c3bdec = () => interopDefault(import('..\\pages\\login.vue' /* webpackChunkName: "pages_login" */))
 const _6cdd56ce = () => interopDefault(import('..\\pages\\productos\\index.vue' /* webpackChunkName: "pages_productos_index" */))
+const _5906c5bc = () => interopDefault(import('..\\pages\\registro.vue' /* webpackChunkName: "pages_registro" */))
 const _66d68ef0 = () => interopDefault(import('..\\pages\\categorias\\crear.vue' /* webpackChunkName: "pages_categorias_crear" */))
 const _7ef487fa = () => interopDefault(import('..\\pages\\productos\\crear.vue' /* webpackChunkName: "pages_productos_crear" */))
 const _4d21ab02 = () => interopDefault(import('..\\pages\\productos\\main.js' /* webpackChunkName: "pages_productos_main" */))
-const _7ac58633 = () => interopDefault(import('..\\pages\\productos\\nuevo.vue' /* webpackChunkName: "pages_productos_nuevo" */))
 const _09767df3 = () => interopDefault(import('..\\pages\\index.vue' /* webpackChunkName: "pages_index" */))
 
 Vue.use(Router)
@@ -94,9 +95,17 @@ export function createRouter() {
       component: _70405f3e,
       name: "contacto"
     }, {
+      path: "/login",
+      component: _59c3bdec,
+      name: "login"
+    }, {
       path: "/productos",
       component: _6cdd56ce,
       name: "productos"
+    }, {
+      path: "/registro",
+      component: _5906c5bc,
+      name: "registro"
     }, {
       path: "/categorias/crear",
       component: _66d68ef0,
@@ -109,10 +118,6 @@ export function createRouter() {
       path: "/productos/main",
       component: _4d21ab02,
       name: "productos-main"
-    }, {
-      path: "/productos/nuevo",
-      component: _7ac58633,
-      name: "productos-nuevo"
     }, {
       path: "/",
       component: _09767df3,
