@@ -48,9 +48,12 @@
                 id="cantidad"
               >
             </div>
-            <b-form-goup label="Categoria" label-for="categoria">
+
+            <div class="form-group">
+            <label label-for="categoria">categoria</label>
               <b-form-select id="categoria" v-model="form.categoria" :options="categorias"></b-form-select>
-            </b-form-goup>
+            </div>
+
           </div>
         </div>
         <div class="row">
@@ -66,7 +69,7 @@
 
 <script>
 import { db, storage } from "../../services/firebase";
-import { async } from "q";
+//import { async } from "q";
 
 export default {
   asyncData() {
@@ -77,7 +80,7 @@ export default {
         let categorias = [];
 
         categoriasSnap.forEach(value => {
-          categorias.push(value.data().categoria);
+          categorias.push(value.data().nombre);
         });
         return {
           categorias

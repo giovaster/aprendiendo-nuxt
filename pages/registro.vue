@@ -37,9 +37,9 @@
       </div>
     </div>
     <div class="row">
-        <div class="col-xs-12 offset-sm-5">
+       <!-- <div class="col-xs-12 offset-sm-5">
             <b-spinner variant="primary" v-if="guardando"></b-spinner>
-        </div>
+        </div>-->
     </div>
     <div class="row">
         <div class="col-xs-12 offser-sm-5">
